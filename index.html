@@ -5,32 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./style.css">
+
   <title>Frontend Mentor | Product preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
-
-  Perfume
-
-  Gabrielle Essence Eau De Parfum
-
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
-
-  $149.99
-  $169.99
-
-  Add to Cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<body class="bg-cream min-h-screen flex justify-center items-center">
+  <article class="mx-4 my-7 rounded-xl overflow-hidden bg-white font-medium sm:grid sm:grid-cols-2 sm:max-w-[37.5rem]">
+    <figure>
+      <picture>
+        <source media="(max-width: 639px)" srcset="./images/image-product-mobile.jpg" alt="Perfume Image"/>
+        <source media="(min-width: 640px)" srcset="./images/image-product-desktop.jpg" alt="Perfume Image" />
+        <img src="./images/image-product-mobile.jpg" alt="Perfume Image" />
+      </picture>
+    </figure>
+    <div class="p-6 bg-white text-grey flex flex-col justify-between">
+      <p class="uppercase text-xs tracking-widest">Perfume</p>
+      <h1 class="text-3xl font-bold font-fraunces my-3 text-black leading-8">
+        Gabrielle Essence Eau De Parfum
+      </h1>
+      <p class="text-sm mb-4 leading-6">
+        A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.
+      </p>
+      <div class="flex items-center gap-4 mb-5">
+        <p class="text-3xl text-green-500 font-fraunces font-bold">$149.99</p>
+        <p class="original-price text-sm"><del>$169.99</del></p>
+      </div>
+      <button 
+        class="w-full flex justify-center items-center gap-4 text-sm bg-green-500 hover:bg-green-700 text-white rounded-lg py-3"
+        aria-label="Add Gabrielle Essence Eau De Parfum to cart"
+      >
+        <img src="./images/icon-cart.svg" alt="">
+        Add to Cart
+      </button>
+    </div>
+  </article>
 </body>
 </html>
